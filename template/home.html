@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    {% block content %}
+    {% include "navbar.html" %}
+    <div class = "bg-center h-screen"style = "background-image: url('https://c4.wallpaperflare.com/wallpaper/424/211/678/super-pictures-nature-1920x1080-wallpaper-preview.jpg'); background-size:cover;">
+        <div class="flex items-center justify-center min-h-screen">
+            <button class="px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 active:bg-blue-800">
+            <a href={%url 'weather'%} >
+            Check weather
+            </a>
+            </button>
+        </div>
+    </div>
+    {% comment %} <button><a href ="{% url "weather" %}">check ur weather</a></button>
+    <img src = "https://img.freepik.com/premium-photo/desolate-horizon-climate-change-concept_1036975-217419.jpg"style ="object-fit:cover; width:100%;height:110vh;">  {% endcomment %}
+    {% endblock content %}
+</body>
+</html>
+   {% comment %} <img src = "https://img.freepik.com/free-photo/white-clouds-blue-background_23-2148964575.jpg"width="200">  {% endcomment %}
